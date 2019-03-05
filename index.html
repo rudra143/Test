@@ -2,83 +2,93 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Tic Tac Toe</title>
+    <title>Program 1</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style media="screen">
       .myDiv{
-        border: 1px solid black;
-        margin: 2px;
-        height: 200px;
-        width: 200px;
-        padding: 60px;
-        font-size: 80px;
+        width: auto;
+        height: 190px;
+        margin: 5px;
         color: #fff;
-        background-color: black;
+        font-size: 80px;
+        padding: 50px;
       }
 
-      .blue{
-        background-color: blue;
+      @media screen and (max-width: 992px) {
+        .container{
+          margin-top: 40px;
+        }
+
+        .myDiv{
+          height: 150px;
+          margin: 5px;
+          color: #fff;
+          font-size: 70px;
+          padding: 30px;
+        }
       }
-      .red{
-        background-color: red;
+
+      @media screen and (max-width: 768px) {
+        .container{
+          padding-top: 80px;
+        }
+
+        .myDiv{
+          height: 120px;
+          margin: 3px;
+          color: #fff;
+          font-size: 60px;
+          padding: 30px;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .myDiv{
+          height: 80px;
+          margin: 3px;
+          color: #fff;
+          font-size: 50px;
+          padding: 30px;
+        }
       }
     </style>
   </head>
   <body>
 
-
     <div class="container">
-        <div class="row mt-5">
-          <div class="col-8 offset-2">
-            <!-- first inner row -->
-            <div class="row">
-              <div id="one" class="text-center myDiv col">
-
-              </div>
-              <div id="two" class="text-center myDiv col">
-
-              </div>
-              <div id="three" class="text-center myDiv col">
-
-              </div>
-            </div>
-
-            <!-- second inner row -->
-            <div class="row">
-              <div id="four" class="text-center myDiv col">
-
-              </div>
-              <div id="five" class="text-center myDiv col">
-
-              </div>
-              <div id="six" class="text-center myDiv col">
-
-              </div>
-            </div>
-
-            <!-- third inner row -->
-            <div class="row">
-              <div id="seven" class="text-center myDiv col">
-
-              </div>
-              <div id="eight" class="text-center myDiv col">
-
-              </div>
-              <div id="nine" class="text-center myDiv col">
-
-              </div>
-            </div>
-          </div>
+      <!-- first row -->
+      <div class="row justify-content-center">
+        <div id="one" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
         </div>
-        <!-- end of row -->
+        <div id="two" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
+        </div>
+        <div id="three" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
+        </div>
+      </div>
+      <!-- second row -->
+      <div class="row justify-content-center">
+        <div id="four" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
+        </div>
+        <div id="five" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
+        </div>
+        <div id="six" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
+        </div>
+      </div>
+      <!-- third row -->
+      <div class="row justify-content-center">
+        <div id="seven" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
+        </div>
+        <div id="eight" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
+        </div>
+        <div id="nine" class="text-center myDiv bg-dark col-3 col-sm-3 col-md-2 col-lg-2">
+        </div>
+      </div>
     </div>
-    <!-- end of container -->
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         flag = true;

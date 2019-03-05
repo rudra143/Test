@@ -5,54 +5,7 @@
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style media="screen">
-      .myDiv{
-        width: auto;
-        height: 190px;
-        margin: 5px;
-        color: #fff;
-        font-size: 80px;
-        padding: 50px;
-      }
-
-      @media screen and (max-width: 992px) {
-        .container{
-          margin-top: 40px;
-        }
-
-        .myDiv{
-          height: 150px;
-          margin: 5px;
-          color: #fff;
-          font-size: 70px;
-          padding: 35px;
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        .container{
-          padding-top: 80px;
-        }
-
-        .myDiv{
-          height: 120px;
-          margin: 3px;
-          color: #fff;
-          font-size: 60px;
-          padding: 30px;
-        }
-      }
-
-      @media screen and (max-width: 576px) {
-        .myDiv{
-          height: 80px;
-          margin: 3px;
-          color: #fff;
-          font-size: 50px;
-          padding: 15px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
 
@@ -89,100 +42,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        flag = true;
-        $('.myDiv').on('click',function(event){
-          event.preventDefault();
-          if (flag) {
-            $(this).addClass('fa fa-times');
-            flag = false;
-          } else {
-            $(this).addClass('fa fa-circle-o');
-            flag = true;
-          }
-
-          // 123
-          if($('#one').hasClass('fa fa-times') && $('#two').hasClass('fa fa-times') && $('#three').hasClass('fa fa-times')){
-            alert('Cross Wins');
-            location.reload();
-          }
-          if($('#one').hasClass('fa fa-circle-o') && $('#two').hasClass('fa fa-circle-o') && $('#three').hasClass('fa fa-circle-o')){
-            alert('Circle Wins');
-            location.reload();
-          }
-
-          // 147
-          if($('#one').hasClass('fa fa-circle-o') && $('#four').hasClass('fa fa-circle-o') && $('#seven').hasClass('fa fa-circle-o')){
-            alert('Circle Wins');
-            location.reload();
-          }
-          if($('#one').hasClass('fa fa-times') && $('#four').hasClass('fa fa-times') && $('#seven').hasClass('fa fa-times')){
-            alert('Cross Wins');
-            location.reload();
-          }
-
-          //159
-          if($('#one').hasClass('fa fa-times') && $('#five').hasClass('fa fa-times') && $('#nine').hasClass('fa fa-times')){
-            alert('Cross Wins');
-            location.reload();
-          }
-          if($('#one').hasClass('fa fa-circle-o') && $('#five').hasClass('fa fa-circle-o') && $('#nine').hasClass('fa fa-circle-o')){
-            alert('Circle Wins');
-            location.reload();
-          }
-
-          //789
-          if($('#seven').hasClass('fa fa-circle-o') && $('#eight').hasClass('fa fa-circle-o') && $('#nine').hasClass('fa fa-circle-o')){
-            alert('Circle Wins');
-            location.reload();
-          }
-          if($('#seven').hasClass('fa fa-times') && $('#eight').hasClass('fa fa-times') && $('#nine').hasClass('fa fa-times')){
-            alert('Cross Wins');
-            location.reload();
-          }
-          //369
-          if($('#three').hasClass('fa fa-times') && $('#six').hasClass('fa fa-times') && $('#nine').hasClass('fa fa-times')){
-            alert('Cross Wins');
-            location.reload();
-          }
-          if($('#three').hasClass('fa fa-circle-o') && $('#six').hasClass('fa fa-circle-o') && $('#nine').hasClass('fa fa-circle-o')){
-            alert('Circle Wins');
-            location.reload();
-          }
-
-          //258
-          if($('#two').hasClass('fa fa-times') && $('#five').hasClass('fa fa-times') && $('#eight').hasClass('fa fa-times')){
-            alert('Cross Wins');
-            location.reload();
-          }
-          if($('#two').hasClass('fa fa-circle-o') && $('#five').hasClass('fa fa-circle-o') && $('#eight').hasClass('fa fa-circle-o')){
-            alert('Circle Wins');
-            location.reload();
-          }
-          //456
-          if($('#four').hasClass('fa fa-times') && $('#five').hasClass('fa fa-times') && $('#six').hasClass('fa fa-times')){
-            alert('Cross Wins');
-            location.reload();
-          }
-          if($('#four').hasClass('fa fa-circle-o') && $('#five').hasClass('fa fa-circle-o') && $('#six').hasClass('fa fa-circle-o')){
-            alert('Circle Wins');
-            location.reload();
-          }
-          //357
-          if($('#three').hasClass('fa fa-times') && $('#five').hasClass('fa fa-times') && $('#seven').hasClass('fa fa-times')){
-            alert('Cross Wins');
-            location.reload();
-          }
-          if($('#three').hasClass('fa fa-circle-o') && $('#five').hasClass('fa fa-circle-o') && $('#seven').hasClass('fa fa-circle-o')){
-            alert('Circle Wins');
-            location.reload();
-          }
-        });
-
-
-      });
-    </script>
+    <script src="tictactoe.js"></script>
 
   </body>
 </html>
